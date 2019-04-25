@@ -1,10 +1,11 @@
-    <?xml version="1.0"?>
+<?xml version="1.0"?>
     <project name="Rectangle-Build" default="main" basedir="." >
         <property environment="env" />
 
         <property name="src.dir" location="src" />
         <property name="build.dir" location="bin" />
         <property name="dist.dir" location="dist" />
+	<property name="docs.dir" location="docs" />
 
         <path id="class.path">
         <pathelement location="./bin" />
@@ -16,10 +17,11 @@
             <delete dir="${dist.dir}" />
         </target>
 
-        <target name="mkdir">
+        <target name="makedir">
             <mkdir dir="${build.dir}" />
             <mkdir dir="${docs.dir}" />
             <mkdir dir="${dist.dir}" />
+        </target>
     
         <target name="compile" depends="clean, makedir">
             <javac srcdir="${src.dir}" destdir="${build.dir}">
@@ -28,9 +30,9 @@
         </target>
 
         <target name="jar" depends="compile">
-            <jar destfile="${dist.dir}\rectangle.jar" basedir="${build.dir}">
+            <jar destfile="${dist.dir}\Rectangle.jar" basedir="${build.dir}">
                 <manifest>
-                    <attribute name="Main-Class" value="Rectangulator">
+                    <attribute name="Main-Class" value="Rectangulator"/>
                 </manifest>
             </jar>
         </target>
