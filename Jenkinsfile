@@ -8,4 +8,10 @@ pipeline {
             }
         }
     }
+
+    post {
+        alwasys {
+            archieve 'dist/*.jar'
+        }
+    }
 }
