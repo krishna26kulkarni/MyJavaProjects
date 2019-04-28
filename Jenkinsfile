@@ -10,7 +10,7 @@ pipeline {
     }
 
     post {
-        alwasys {
+        always {
             archieve 'dist/*.jar'
         }
     }
