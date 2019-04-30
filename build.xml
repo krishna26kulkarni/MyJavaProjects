@@ -8,7 +8,8 @@
 	<property name="docs.dir" location="docs" />
 
         <path id="class.path">
-        <pathelement location="./bin" />
+            <pathelement location="./lib/junit-4.10.jar" />
+            <pathelement location="${build.dir}" />
         </path>
 
         <target name="clean">
