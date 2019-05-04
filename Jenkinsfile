@@ -18,6 +18,9 @@ pipeline {
         }
     
         stage('copy artifact to apache root') {
+            agent {
+                label 'apache'
+            }
             steps {
                 sh 'cp dist/Rectangle.jar /var/www/html/builds'
             }
