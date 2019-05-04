@@ -19,7 +19,7 @@ pipeline {
     
         stage('copy artifact to apache root') {
             steps {
-                sh 'cp dist/Rectangle.jar /var/www/html'
+                sh 'cp dist/Rectangle.jar /var/www/html/builds'
             }
         }
     }
