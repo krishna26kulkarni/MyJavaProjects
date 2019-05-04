@@ -13,6 +13,7 @@ pipeline {
         }
         stage('build') {
             steps {
+                echo "Building project"
                 sh 'ant -f build.xml -v'
             }
         }
