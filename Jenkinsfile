@@ -16,9 +16,7 @@ pipeline {
                 sh 'ant -f build.xml -v'
             }
         }
-    }
-
-    stage {
+    
         stage('copy artifact to apache root') {
             steps {
                 sh 'cp dist/Rectangle.jar /var/www/html'
