@@ -18,6 +18,14 @@ pipeline {
         }
     }
 
+    stage {
+        stage('copy artifact to apache root') {
+            steps {
+                sh 'cp dist/Rectangle.jar /var/www/html'
+            }
+        }
+    }
+
     post {
         always {
             archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
